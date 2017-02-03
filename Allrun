@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#Cases="S SSE SE ESE E ENE NE NNE N NNW NW WNW W WSW SW SSW"
+#Cases="W"
+#Cases="mesh_stack2.1_no_m03p006 N_stack2.1_no_m03p006"
+#Cases="mesh N"
+#Cases="N_Diffusion NNW_Diffusion"
+Cases="mesh N NNW NE"
+
+for case in $Cases
+do
+    (cd $case
+        ./Allrun $*
+     )
+done
